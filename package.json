@@ -1,0 +1,52 @@
+{
+  "name": "metode-simpleks",
+  "version": "0.0.1",
+  "description": "metode simpleks n variabel",
+  "main": "index.js",
+  "scripts": {
+    "test": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alditiadika/metode-simpleks.git"
+  },
+  "keywords": [
+    "metode",
+    "simpleks",
+    "pemrograman",
+    "linear",
+    "persamaan",
+    "linear"
+  ],
+  "author": "Randika Alditia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alditiadika/metode-simpleks/issues"
+  },
+  "homepage": "https://github.com/alditiadika/metode-simpleks#readme",
+  "dependencies": {
+    "mathjax": "^2.7.5",
+    "mathjax-node": "^2.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-loadable": "^5.5.0",
+    "react-mathjax": "^1.0.1",
+    "react-redux": "^7.0.3",
+    "react-scripts": "^3.0.1",
+    "reactstrap": "^8.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
