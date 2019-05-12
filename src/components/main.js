@@ -16,8 +16,14 @@ class MainComponent extends Component {
   }
   submit = () => {
     const { nVar } = this.state
-    !isNaN(nVar) && nVar > 0 && nVar <= 10 && this.props.setVar(parseInt(nVar))
+    !isNaN(nVar) &&
+      nVar > 0 &&
+      nVar <= 10 &&
+      parseInt(nVar) === parseFloat(nVar) &&
+      this.props.setVar(parseInt(nVar))
     nVar > 10 && this.props.setWarning(true, 'Maksimal 10 variabel!')
+    parseInt(nVar) !== parseFloat(nVar) &&
+      this.props.setWarning(true, 'Masukkan data dengan benar!')
   }
   render() {
     return (
@@ -50,7 +56,6 @@ class MainComponent extends Component {
               <Button
                 style={{ width: '100%' }}
                 color='warning'
-                outline
                 onClick={this.submit}
               >
                 <span>

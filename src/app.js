@@ -1,22 +1,35 @@
 import React, { Component } from 'react'
 import { Container } from 'reactstrap'
 
-import Main from './components/main'
 import Warning from './components/utils/warning'
-import First from './components/1-standard-eq'
-import Second from './components/2-constraint-eq'
+import Loadable from 'react-loadable'
+const Loading = () => {
+  return (
+    <div className='text-center'>
+      <div className='lds-dual-ring' />>
+    </div>
+  )
+}
+const Main = Loadable({
+  loader: () => import('./components/main'),
+  loading: Loading
+})
+const First = Loadable({
+  loader: () => import('./components/1-standard-eq'),
+  loading: Loading
+})
+const Second = Loadable({
+  loader: () => import('./components/2-constraint-eq'),
+  loading: Loading
+})
+const Third = Loadable({
+  loader: () => import('./components/3-read-only-eq'),
+  loading: Loading
+})
 
 export default class extends Component {
   state = {
     top: 100
-  }
-  componentWillMount() {
-    window.addEventListener('scroll', () => {
-      const top = window.pageYOffset || document.documentElement.scrollTop
-      this.setState({
-        top: 100 + top
-      })
-    })
   }
   render() {
     return (
@@ -25,6 +38,8 @@ export default class extends Component {
         <Main />
         <First />
         <Second />
+        <Third />
+        <div style={{ height: '800px' }} />
       </Container>
     )
   }

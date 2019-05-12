@@ -24,6 +24,7 @@ class Warning extends Component {
               <Button
                 color='primary'
                 outline
+                autoFocus
                 onClick={() => this.props.setWarning(false)}
               >
                 Close

@@ -4,7 +4,9 @@
   "description": "metode simpleks n variabel",
   "main": "index.js",
   "scripts": {
-    "test": "react-scripts start"
+    "start": "react-scripts start",
+    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
